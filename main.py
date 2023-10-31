@@ -14,6 +14,14 @@ def encoder(password):
     return encoded
 
 
+def decoder(password):
+    decoded = ''
+    for i in password:
+        decoded += str((int(i) - 3) % 10)
+
+    return decoded
+
+
 def main():
     while True:
         print_menu()
@@ -29,6 +37,7 @@ def main():
 
         if option == 3:
             break
+
 
 if __name__ == "__main__":
     main()
